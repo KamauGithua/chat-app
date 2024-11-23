@@ -10,6 +10,8 @@ const app = express();
 
 const PORT = process.env.PORT
 
+app.use(express.json());
+
 // auth routes
 app.use("/api/auth", authRoutes);
 
