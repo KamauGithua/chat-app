@@ -2,6 +2,7 @@ import { generateToken } from "../lib/utils.js";
 
 import User from "../models/user.model.js"
 import bcrypt from "bcryptjs";
+import cloudinary from "cloudinary"
 
 
 export const signup = async (req,res) =>{
@@ -113,7 +114,7 @@ export const updateProfile = async (req, res) => {
     }
   };
 
-  export const checkAuth = (req, res) => {
+export const checkAuth = (req, res) => {
     try {
       res.status(200).json(req.user);
     } catch (error) {
